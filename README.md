@@ -14,24 +14,112 @@ To study and implement the concept of overloading in C++, including constructor 
 
 # Theory
 
-Overloading allows multiple functions or operators to have the same name but different parameters or operand types. This enables polymorphism and improves code readability and flexibility.
+Overloading is a fundamental concept in C++ that allows multiple functions or operators to have the same name but differ in their parameter lists or operand types. This powerful feature enables polymorphism at compile-time (static polymorphism) and significantly enhances code readability, flexibility, and maintainability.
 
-# Types of Overloading:
+# 1. Constructor Overloading
 
-    Constructor Overloading – Multiple constructors with different parameter lists to initialize objects in various ways.
+Constructor overloading allows a class to have multiple constructors with different parameter lists. This provides flexibility in object initialization by allowing objects to be created in various ways depending on the available information.
 
-    Function Overloading – Multiple functions with the same name but different parameters within the same scope.
+# Key Characteristics:
 
-    Operator Overloading – Defining custom behavior for operators when used with user-defined types.
+    All constructors have the same name as the class
 
-# Key Features:
+    They must differ in the number and/or types of parameters
 
-    Enhances code reusability and simplicity.
+    Default constructor has no parameters
 
-    Provides intuitive syntax for user-defined types.
+    Parameterized constructors initialize objects with specific values
 
-    Reduces the need for multiple function names for similar operations.
+    The appropriate constructor is automatically selected based on the arguments provided during object creation
 
+# Benefits:
+
+    Provides multiple ways to initialize objects
+
+    Enhances class usability and flexibility
+
+    Reduces the need for multiple setter methods after object creation
+
+    Ensures objects are always in a valid state upon creation
+
+# 2. Function Overloading
+
+Function overloading, also known as method overloading, allows multiple functions to share the same name within the same scope but with different parameter signatures.
+
+# Key Characteristics:
+
+    Functions must have the same name but different parameter lists
+
+    Differences can be in the number, type, or order of parameters
+
+    Return type alone is not sufficient to distinguish overloaded functions
+
+    Resolution occurs at compile-time based on argument matching
+
+# Benefits:
+
+    Provides intuitive naming for similar operations
+
+    Reduces the need for multiple function names
+
+    Improves code readability and organization
+
+    Enables type-safe operations on different data types
+
+# Common Use Cases:
+
+    Mathematical operations on different numeric types
+
+    String manipulation with various parameter combinations
+
+    I/O operations handling different data formats
+
+    Utility functions supporting multiple data types
+
+# 3. Operator Overloading
+
+Operator overloading allows programmers to redefine the behavior of C++ operators when used with user-defined types (classes and structures). This enables objects to be manipulated using the same syntax as built-in types.
+
+# Key Characteristics:
+
+    Operators are overloaded as member functions or friend functions
+
+    The function name is the keyword 'operator' followed by the operator symbol
+
+    Most C++ operators can be overloaded except ::, .*, ., and ?:
+
+    Operators maintain their original precedence and associativity
+
+    At least one operand must be a user-defined type
+
+# Categories of Overloadable Operators:
+
+    Arithmetic operators: +, -, *, /, %
+
+    Relational operators: ==, !=, <, >, <=, >=
+
+    Logical operators: &&, ||, !
+
+    Assignment operators: =, +=, -=, *=, /=
+
+    Increment/Decrement operators: ++, --
+
+    Subscript operator: []
+
+    Function call operator: ()
+
+    Stream operators: <<, >>
+
+# Benefits:
+
+    Provides intuitive syntax for user-defined types
+
+    Enhances code readability and natural expression
+
+    Enables seamless integration of custom types with standard C++ syntax
+
+    Supports mathematical and logical operations on objects
+    
 # Algorithms
 
 # 1. Constructor Overloading (Constructor overloading 1.cpp)
